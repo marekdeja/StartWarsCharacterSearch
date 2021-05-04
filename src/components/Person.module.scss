@@ -1,0 +1,14 @@
+.personStyles {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    &:hover{
+        cursor: pointer;
+        background-color: grey;
+    }
+  }
+  .film{
+      margin-left: 20px;
+      margin-top:10px;
+  }
