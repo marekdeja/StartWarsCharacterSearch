@@ -1,6 +1,8 @@
 import axios from "axios";
 const apiUrl = "https://swapi.dev/api";
 
+const httpsUrl = (url) => url.replace("http", "https");
+
 export const getPeople = (name) =>
     axios
         .get(`${apiUrl}/people/?search=${name}`)
@@ -11,9 +13,9 @@ export const getPeople = (name) =>
             console.log(error);
         });
 
-        export const getHomeworld = (url) =>
+export const getHomeworld = (url) =>
     axios
-        .get(`${url}`)
+        .get(`${httpsUrl(url)}`)
         .then((response) => {
             return response.data;
         })
@@ -21,13 +23,15 @@ export const getPeople = (name) =>
             console.log(error);
         });
 
-        export const getFilm = (url) =>
-    axios
-        .get(`${url}`)
+export const getFilm = (url) => {
+    ;
+    return axios
+        .get(`${httpsUrl(url)}`)
         .then((response) => {
             return response.data;
         })
         .catch((error) => {
             console.log(error);
         });
-        
+}
+
